@@ -1,0 +1,33 @@
+<html>
+
+<script>
+
+    document.write("<h1> PROGRAMA PARA CALCULAR IMC </h1>");
+    document.write('<br>');
+  
+    function saltarLinea(){
+        document.write('<br>');
+        document.write('<br>');
+        document.write('<br>');
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularIMC(peso,altura){
+        return (peso / (altura*altura));
+    }
+
+    nombre = prompt('Ingrese su nombre por favor');
+    peso = prompt(nombre + ", Ingrese su peso en KG");
+    altura = prompt(nombre + ", Ingrese su estatura en MTS");
+
+    imcCalculado = calcularIMC(peso,altura);
+
+    imprimir (nombre + " Su IMC calculado es: " + imcCalculado);
+
+</script>
+
+</html>
