@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA PARA CALCULAR IMC </h1>
+
+<script>
+
+    function saltarLinea(){
+        document.write('<br>');
+        document.write('<br>');
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularIMC(peso,altura){
+        return (peso / (altura*altura));
+    }
+
+    nombre = prompt('Ingrese su nombre por favor');
+    peso = prompt(nombre + ", Ingrese su peso en KG");
+    altura = prompt(nombre + ", Ingrese su estatura en MTS");
+
+    imcCalculado = Math.round(calcularIMC(peso,altura));
+
+    imprimir (nombre + " Su IMC calculado es: " + imcCalculado);
+
+    if (imcCalculado < 18.5) {
+        imprimir(nombre + ", su IMC se encuentra abajo de lo recomendado");
+    }else if (imcCalculado >= 18.5 && imcCalculado <= 24.9){
+        imprimir(nombre + ", su IMC se encuentra en peso normal o adecuado");
+    }else if (imcCalculado >= 25 && imcCalculado <= 29.9){
+        imprimir(nombre + ", se encuentra en sobrepeso");
+    }else if (imcCalculado >= 30 && imcCalculado <= 34.9){
+        imprimir(nombre + ", se encuentra en Obsedidad Grado I");
+    }else if (imcCalculado >= 35 && imcCalculado <= 39.9){
+        imprimir(nombre + ", se encuentra en Obsedidad Grado II");
+    }else{
+        imprimir(nombre + ", se encuentra en Obsedidad Grado III  o Obesidad mórbida");
+    }
+
+</script>
